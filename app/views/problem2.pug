@@ -1,0 +1,31 @@
+#div1
+	img#led-status(src='../icons/led-off.png', alt='board', height='405', width='573')
+	h4#message
+	pre#editor 
+		|	//put the pin number in parentheses and add let to the beginning
+		|	YOU SUCK ASSHOLE
+	script(src='../src-noconflict/ace.js')
+
+	script.
+		global.editor = ace.edit("editor");
+		editor.setTheme("ace/theme/monokai");
+		editor.getSession().setMode("ace/mode/javascript");
+
+	button.button#led-button Try Your Code
+	button.button#load_next Next >>
+	button.button#load_back << Back
+	script.
+		const storage = require('electron-json-storage');
+		$('#load_next').on('click', function(){
+			storage.set('title', { title: 'Video Series 2', src: 'https://www.youtube.com/embed/nlYlNF30bVg' }, function(error) {
+			  if (error) throw error;
+			});
+			$('#div1').load('video.pug');
+		});
+		$('#load_back').on('click', function(){
+			storage.set('title', { title: 'Video Series 2', src: 'https://www.youtube.com/embed/nlYlNF30bVg'}, function(error) {
+		  		if (error) throw error;
+			});
+			$('#div1').load('video.pug');
+		})
+	script(src='../index.js')

@@ -1,0 +1,17 @@
+{
+  "name": "arduino_project",
+  "version": "1.0.0",
+  "description": "An arduino emulator using electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+  	"electron-json-storage": "^3.0.5",
+  	"electron": "^1.6.10",
+    "electron-pug": "^1.5.1",
+    "jQuery": "^1.7.4"
+  },
+  "author": "Matthew Magee",
+  "license": "MIT"
+}

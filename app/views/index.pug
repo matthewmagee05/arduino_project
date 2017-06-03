@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+    link(rel='stylesheet', href='../styles/monokai.css')
+    link(rel='stylesheet', href='../styles/style.css')
+body
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+    script(src='../src-noconflict/ace.js')
+    script(src='../js/helper.js')
+    script(src='../js/videoProperties.js')
+    script(src='../js/problemProperties.js')
+    #movie
+        h1 Welcome to the course!
+        iframe(width='575', height='371', src='https://www.youtube.com/embed/XL9Ri8pO68w')
+        h4#titleBar
+        
+        button.button#load_next(onclick="loadProblemForward(problems[iProblem])") Next >>
+    
+    

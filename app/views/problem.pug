@@ -1,0 +1,19 @@
+
+img#led-status(src='../icons/led-off.png', alt='board', height='405', width='573')
+h4#message
+pre#editor 
+    |    //put the pin number in parentheses and add let to the beginning
+    |    var led = new five.Led()
+script(src='../src-noconflict/ace.js')
+
+script.
+    global.editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/javascript");
+    editor.$blockScrolling = Infinity;
+    replaceText(editor);
+
+button.button#led-button(onclick="checkAnswer(editor)") Try Your Code
+button.button#load_next.nextButton(onclick="loadVideoForward(videos[iMovie]);") Next >>
+button.button#load_back(onclick="loadVideoBackward(videos[--iMovie])") << Back
+
